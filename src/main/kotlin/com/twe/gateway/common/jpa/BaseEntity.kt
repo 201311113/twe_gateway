@@ -1,4 +1,4 @@
-package com.twe.gateway.common.utils
+package com.tw2.prepaid.common.jpa
 
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
@@ -14,10 +14,10 @@ class BaseEntity {
     val id: Long = 0
 
     @CreatedDate
-    var createdAt: LocalDateTime = LocalDateTime.now()
+    var createdAt: LocalDateTime = LocalDateTime.MIN
+        protected set
 
     @LastModifiedDate
-    var updatedAt: LocalDateTime = LocalDateTime.now()
-
-    var active: Boolean = true
+    var updatedAt: LocalDateTime = LocalDateTime.MIN
+        protected set
 }
